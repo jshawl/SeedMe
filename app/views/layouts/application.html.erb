@@ -9,11 +9,22 @@
 <body>
   <header>
     <h1 class = "header-logo"> Welcome to SeedMe</h1>
+    <ul class = "header-nav">
+      <li> <%= link_to "Home", root_url %> </li>
+      <li> <%= link_to "Sign In", "/sign_in" %></li>
+      <li> <%= link_to "Sign Out", "/sign_out" %></li>
+      <li> <%= link_to "Sign Up", "/sign_up" %> </li>
+    </ul>
   </header>
-<nav>
-
-</nav>
+  <div class = "wrapper">
+    <nav>
+      <p>  Navigation  </p>
+      <%= link_to "Company Index", root_url %>
+      <%= link_to "User Index", users_path %>
+      <%= link_to "Favorites", root_url %>
+      <%= link_to "Profile Page", root_url %>
+    </nav>
 <%= yield %>
-
+</div>
 </body>
 </html>
