@@ -19,15 +19,13 @@
   <div class = "wrapper">
     <nav>
       <% if session[:user] %>
-        <p>  Navigation  </p>
+        <p id = "navigation-text">  Navigation  </p>
         <%= link_to "Company Index", root_url %>
         <%= link_to "User Index", users_path %>
         <%= link_to "Favorites", root_url %>
         <%= link_to "Profile Page", user_path(session[:user]["id"]) %>
       <% end %>
     </nav>
-
-
 <%= yield %>
 </div>
 </body>

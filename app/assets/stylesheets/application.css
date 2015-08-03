@@ -11,25 +11,25 @@ header{
   display: inline-block;
   margin: auto;
   border-radius: 4px;
- font-family: Arial;
- font-size: 20px;
- background: #ffb13b;
- padding: 10px 20px 10px 20px;
- border: solid #B64926 2px;
- text-decoration: none;
+  font-family: Arial;
+  font-size: 20px;
+  background: #3E606F;
+  padding: 10px 20px 10px 20px;
+  border: solid #91AA9D 2px;
+  text-decoration: none;
 }
 .header-nav a{
   text-decoration: none;
   color: #ffffff;
 }
 body{
-  background: #FFF0A5;
+  background: #FCFFF5;
 }
 
 nav {
   float: left;
   padding-bottom: 40px;
-  background: #FFB03B;
+  background: #91AA9D;
   border-radius: 8px;
 }
 nav a {
@@ -41,7 +41,7 @@ nav a {
   color: #ffffff;
   margin: 5px;
   padding: 5px;
-  background: #468966;
+  background: #3E606F;
   text-decoration: none;
 }
 nav p {
@@ -54,11 +54,24 @@ nav p {
   margin-left: 20px;
 }
 .edit-delete{
-  position: relative;
-  top: 150px;
+  position:relative;
+  float: right;
+  bottom: 150px;
   right: 150px;
+  list-style: none;
 }
 
+.edit-delete a{
+  text-align:center;
+  display: block;
+  border-radius: 4px;
+  font-family: Arial;
+  color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+  background: #3E606F;
+  text-decoration: none;
+}
 /*Forms */
 
 #new_company label, #new_company input {
