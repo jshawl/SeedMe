@@ -4,6 +4,9 @@ h1 {
 header{
   background: #D1DBBD;
 }
+div.wrapper h2{
+  text-align: center;
+}
 .header-nav{
   text-align: center;
 }
@@ -47,12 +50,16 @@ nav a {
 nav p {
   text-align: center;
 }
-
+/*Company Info*/
 .companies {
 
   width: 50%;
   margin: 0 auto;
   border-bottom: 5px solid #91AA9D;
+}
+
+.company-name{
+  text-align: center;
 }
 .edit-delete{
   position:relative;
