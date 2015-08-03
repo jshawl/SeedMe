@@ -24,7 +24,14 @@ class CompaniesController < ApplicationController
 
   def edit
   end
-
+  def update
+    @company.update(company_params)
+    if @company.save
+      redirect_to user_company_path(@company.user, @company)
+    else
+      render edit_user_company_path(@user, @company)
+    end
+  end
   private
     def company_params
         params.require(:company).permit(:name, :industry, :pitch_text, :pitch_url)

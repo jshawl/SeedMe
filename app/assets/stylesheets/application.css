@@ -1,41 +1,80 @@
 h1 {
   text-align: center;
 }
+header{
+  border-bottom:
+}
 .header-nav{
   text-align: center;
 }
 .header-nav li{
   display: inline-block;
   margin: auto;
+  border-radius: 4px;
+ font-family: Arial;
+ font-size: 20px;
+ background: #ffb13b;
+ padding: 10px 20px 10px 20px;
+ border: solid #B64926 2px;
+ text-decoration: none;
+}
+.header-nav a{
+  text-decoration: none;
+  color: #ffffff;
+}
+body{
+  background: #FFF0A5;
 }
 
 nav {
   float: left;
-  padding-bottom: 50px;
-  background: #D1DBBD;
+  padding-bottom: 40px;
+  background: #FFB03B;
+  border-radius: 8px;
 }
 nav a {
   display: block;
   text-align: center;
   margin-left: 10px;
+  border-radius: 4px;
+  font-family: Arial;
+  color: #ffffff;
+  margin: 5px;
+  padding: 5px;
+  background: #468966;
+  text-decoration: none;
 }
 nav p {
   text-align: center;
 }
 
 .companies {
-  float: right;
-  width: 75%;
+  float: left;
+  width: 85%;
+  margin-left: 20px;
+}
+.edit-delete{
+  position: relative;
+  top: 150px;
+  right: 150px;
 }
 
-.edit-link{
-  display: block;
-}
 /*Forms */
 
-#new_company {
+#new_company label, #new_company input {
+  display: block;
   margin-left: 30%;
   width: 300px;
+}
+.edit_company{
+  margin-left: 25%;
+}
+
+.edit_company label, .edit_company input, #company_pitch_text{
+  display: block;
+}
+.edit_company input{
+
 }
 .sign-in, .sign-up input {
   display: block;
