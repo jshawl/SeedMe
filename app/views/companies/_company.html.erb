@@ -1,0 +1,7 @@
+<div class="companies">
+  <h2 class="company-name"> <%= link_to company.name, user_company_path(company.user, company) %></h2>
+  <h3 class="company-user"> <%= link_to company.user.username, user_path(company.user) %></h3>
+  <p class="pitch-text">
+    <%= company.pitch_text %>
+  </p>
+</div>
