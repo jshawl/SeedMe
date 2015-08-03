@@ -11,7 +11,8 @@ h1 {
 
 nav {
   float: left;
-  margin: 0 auto;
+  padding-bottom: 50px;
+  background: #D1DBBD;
 }
 nav a {
   display: block;
@@ -27,7 +28,15 @@ nav p {
   width: 75%;
 }
 
+.edit-link{
+  display: block;
+}
+/*Forms */
+
 #new_company {
   margin-left: 30%;
   width: 300px;
+}
+.sign-in, .sign-up input {
+  display: block;
 }

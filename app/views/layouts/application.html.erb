@@ -18,12 +18,16 @@
   </header>
   <div class = "wrapper">
     <nav>
-      <p>  Navigation  </p>
-      <%= link_to "Company Index", root_url %>
-      <%= link_to "User Index", users_path %>
-      <%= link_to "Favorites", root_url %>
-      <%= link_to "Profile Page", root_url %>
+      <% if session[:user] %>
+        <p>  Navigation  </p>
+        <%= link_to "Company Index", root_url %>
+        <%= link_to "User Index", users_path %>
+        <%= link_to "Favorites", root_url %>
+        <%= link_to "Profile Page", user_path(session[:user]["id"]) %>
+      <% end %>
     </nav>
+
+
 <%= yield %>
 </div>
 </body>

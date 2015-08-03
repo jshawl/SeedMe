@@ -1,7 +1,7 @@
 <div class="users">
   <h2><%= link_to user.username, user_path(user) %></h2>
   <ul class ="user-info">
-    <li> Company: <%= link_to user.companies.first.name, user_company_path(user, user.companies.first) %></li>
+    <li> Company: <%= link_to user.companies.first.name, user_company_path(user, user.companies.first) %> </li>
     <li> Industry: <%= user.companies.first.industry %></li>
     <li> Name: <%= user.first_name %> <%= user.last_name %></li>
     <li> Email: <%= mail_to "#{user.email}" %></li>
