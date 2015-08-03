@@ -6,7 +6,8 @@ https://www.lucidchart.com/invitations/accept/535c06fe-65ae-4083-9d18-1cd3b92a1e
 
 s= startup user 
 i= investor
-S
+S:
+
 1. As a user, I should be able to view my profile information.
 2. As a user, I should be able to upload a pitch video to the website. 
 3. As a user, I should be able to leave feedback on other pitches.
