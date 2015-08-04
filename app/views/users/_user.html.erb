@@ -1,5 +1,5 @@
 <div class="users">
-  <h2><%= link_to user.username, user_path(user) %></h2>
+  <h2><%= link_to "#{user.first_name} #{user.last_name}", user_path(user) %></h2>
   <ul class ="user-info">
     <li> Company: <%= link_to user.companies.first.name, user_company_path(user, user.companies.first) %> </li>
     <li> Industry: <%= user.companies.first.industry %></li>

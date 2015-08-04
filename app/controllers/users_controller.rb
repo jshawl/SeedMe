@@ -5,7 +5,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    @user = User.find(params[:id])
+      @user = User.find(params[:id])
+    if @user.companies == []
+      message = "Please add your company information to continue. Failure to input company information could result in performance issues!"
+      redirect_to new_user_company_path(@user, Company.new)
+      flash[:notice] = message
+    end
   end
 
   def sign_up

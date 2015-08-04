@@ -19,10 +19,10 @@
   <div class = "wrapper">
     <nav>
       <% if session[:user] %>
-        <p id = "navigation-text">  Navigation  </p>
-        <%= link_to "Company Index", root_url %>
-        <%= link_to "User Index", users_path %>
-        <%= link_to "Favorites", root_url %>
+        <p id = "navigation-text"> Menu </p>
+        <%= link_to "Add Company", new_user_company_path(session[:user]["id"], Company.new) %>
+        <%= link_to "Company Index", companies_path %>
+        <%= link_to "Watch List", root_url %>
         <%= link_to "Profile Page", user_path(session[:user]["id"]) %>
       <% end %>
     </nav>

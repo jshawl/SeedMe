@@ -1,3 +1,4 @@
+<h2><%= flash[:notice] %></h2>
 <%= render @company %>
 <ul class = "edit-delete">
     <li><%= link_to "Edit Company", edit_user_company_path(@user, @company), class: "edit-link"%></li>

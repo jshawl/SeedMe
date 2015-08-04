@@ -24,6 +24,7 @@ class CompaniesController < ApplicationController
 
   def edit
   end
+
   def update
     @company.update(company_params)
     if @company.save
@@ -32,6 +33,20 @@ class CompaniesController < ApplicationController
       render edit_user_company_path(@user, @company)
     end
   end
+
+  def destroy
+    if session[:user]["id"] != @user.id
+      message = "You Can't Delete Other Companies!"
+      flash.now[:notice] = message
+      render :show
+    else
+      message = "You've Successfully Deleted Your Company."
+      @company.destroy
+      redirect_to root_url
+      flash[:notice] = message
+    end
+  end
+
   private
     def company_params
         params.require(:company).permit(:name, :industry, :pitch_text, :pitch_url)
