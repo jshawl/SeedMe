@@ -3,11 +3,10 @@ Rails.application.routes.draw do
   resources :users do
     resources :companies do
         put 'upvote', to: "companies#upvote"
-        resources :favorite_companies, only: [:create, :destroy]
     end
   end
 
-
+  resources :favorite_companies, only: [:create, :destroy]
   resources :companies, only: [:index, :create]
 
   get '/sign_in', to: 'users#sign_in'
