@@ -1,12 +1,14 @@
 class CompaniesController < ApplicationController
   before_action :get_user, only: [:show, :edit, :new, :create, :update, :destroy]
   before_action :get_company, only: [:show, :edit, :update, :destroy]
+  before_action :is_user, only: [:show]
 
   def index
     @companies = Company.all.order(name: :asc)
   end
 
   def show
+    @is_user = is_user
   end
 
   def new
@@ -35,19 +37,22 @@ class CompaniesController < ApplicationController
   end
 
   def destroy
-    if session[:user]["id"] != @user.id
-      message = "You Can't Delete Other Companies!"
-      flash.now[:notice] = message
-      render :show
-    else
+    # if session[:user]["id"] != @user.id
+    #   message = "You Can't Delete Other Companies!"
+    #   flash.now[:notice] = message
+    #   render :show
+    # else
       message = "You've Successfully Deleted Your Company."
       @company.destroy
       redirect_to root_url
       flash[:notice] = message
-    end
+    # end
   end
 
   private
+    def is_user
+      session[:user]["id"] == @user.id
+    end
     def company_params
         params.require(:company).permit(:name, :industry, :pitch_text, :pitch_url)
     end
