@@ -5,14 +5,12 @@ Rails.application.routes.draw do
         put 'upvote', to: "companies#upvote"
     end
   end
-
+  resources :sessions
   resources :favorite_companies, only: [:create, :destroy]
   resources :companies, only: [:index, :create]
 
-  get '/sign_in', to: 'users#sign_in'
-  post '/sign_in', to: 'users#sign_in!'
-  get '/sign_up', to: 'users#sign_up'
-  post '/sign_up', to: 'users#sign_up!'
-  get '/sign_out', to: 'users#sign_out'
+  get 'signup', to: 'users#new', as: 'signup'
+  get 'login', to: 'sessions#new', as: 'login'
+  delete 'logout', to: 'sessions#destroy', as: 'logout'
 
 end

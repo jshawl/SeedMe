@@ -39,18 +39,18 @@ class CompaniesController < ApplicationController
   def destroy
     message = "You've Successfully Deleted Your Company."
     @company.destroy
-    redirect_to root_url
+    redirect_to companies_path
     flash[:notice] = message
   end
 
   def upvote
-    @company.liked_by User.find(session[:user]["id"])
+    @company.liked_by current_user
     redirect_to :back
   end
 
   private
     def is_user
-      session[:user]["id"] == @user.id
+      current_user.id == @user.id
     end
     def company_params
         params.require(:company).permit(:name, :industry, :pitch_text, :pitch_url)

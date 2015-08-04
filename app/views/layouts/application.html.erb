@@ -11,23 +11,24 @@
   <header>
     <h1 class = "header-logo"> Welcome to SeedMe</h1>
     <ul class = "header-nav">
-        <li> <%= link_to "Home", root_url %> </li>
-      <% if session[:user] %>
-        <li> <%= link_to "Sign Out", "/sign_out" %></li>
+      <%= link_to "Home", root_url %>
+      <% if current_user %>
+        Logged in as <%= current_user.email %>.
+        <%= link_to "Log Out", logout_path, method: :delete %>
       <% else %>
-        <li> <%= link_to "Sign In", "/sign_in" %></li>
-        <li> <%= link_to "Sign Up", "/sign_up" %> </li>
+        <%= link_to "Sign Up", signup_path %> or
+        <%= link_to "Log In", login_path %>
       <% end %>
     </ul>
   </header>
   <div class = "wrapper">
     <nav>
-      <% if session[:user] %>
+      <% if current_user %>
         <p id = "navigation-text"> Menu </p>
-        <%= link_to "Add Company", new_user_company_path(session[:user]["id"], Company.new) %>
+        <%= link_to "Add Company", new_user_company_path(current_user, Company.new) %>
         <%= link_to "Company Index", companies_path %>
         <%= link_to "Watch List", root_url %>
-        <%= link_to "Profile Page", user_path(session[:user]["id"]) %>
+        <%= link_to "Profile Page", user_path(current_user) %>
       <% end %>
     </nav>
 <%= yield %>

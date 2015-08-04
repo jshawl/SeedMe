@@ -1,6 +1,6 @@
 <h2><%= flash[:notice] %></h2>
 <%= render @company %>
-<% if @is_user %>
+<% if @is_user  %>
 <ul class = "edit-delete">
     <li><%= link_to "Edit Company", edit_user_company_path(@user, @company), class: "edit-link"%></li>
     <li><%= link_to "Delete Company", user_company_path(@user, @company), method: :delete %></li>
