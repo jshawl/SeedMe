@@ -37,16 +37,16 @@ class CompaniesController < ApplicationController
   end
 
   def destroy
-    # if session[:user]["id"] != @user.id
-    #   message = "You Can't Delete Other Companies!"
-    #   flash.now[:notice] = message
-    #   render :show
-    # else
-      message = "You've Successfully Deleted Your Company."
-      @company.destroy
-      redirect_to root_url
-      flash[:notice] = message
-    # end
+    message = "You've Successfully Deleted Your Company."
+    @company.destroy
+    redirect_to root_url
+    flash[:notice] = message
+  end
+
+  def upvote
+    @company = Company.find(params[:company_id])
+    @company.liked_by User.find(session[:user]["id"])
+    redirect_to :back
   end
 
   private
