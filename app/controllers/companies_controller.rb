@@ -1,6 +1,6 @@
 class CompaniesController < ApplicationController
   before_action :get_user, only: [:show, :edit, :new, :create, :update, :destroy]
-  before_action :get_company, only: [:show, :edit, :update, :destroy]
+  before_action :get_company, only: [:show, :edit, :update, :destroy, :upvote]
   before_action :is_user, only: [:show]
 
   def index
@@ -44,7 +44,6 @@ class CompaniesController < ApplicationController
   end
 
   def upvote
-    @company = Company.find(params[:company_id])
     @company.liked_by User.find(session[:user]["id"])
     redirect_to :back
   end
@@ -60,6 +59,6 @@ class CompaniesController < ApplicationController
       @user = User.find(params[:user_id])
     end
     def get_company
-      @company = Company.find(params[:id])
+      @company = Company.find(params[:company_id] || params[:id])
     end
 end
