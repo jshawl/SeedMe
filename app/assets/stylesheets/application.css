@@ -40,6 +40,7 @@ div.wrapper h2{
   padding: 8px 16px 8px 16px;
   border: solid #91AA9D 2px;
   text-decoration: none;
+  margin-left: 10px;
 }
 .header-nav a{
   text-decoration: none;
