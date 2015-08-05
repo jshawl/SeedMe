@@ -49,9 +49,7 @@ class CompaniesController < ApplicationController
   end
 
   private
-    def is_user
-      current_user.id == @user.id
-    end
+
     def company_params
         params.require(:company).permit(:name, :industry, :pitch_text, :pitch_url)
     end
@@ -60,5 +58,8 @@ class CompaniesController < ApplicationController
     end
     def get_company
       @company = Company.find(params[:company_id] || params[:id])
+    end
+    def is_user
+      current_user.id == User.find(params[:user_id])
     end
 end
