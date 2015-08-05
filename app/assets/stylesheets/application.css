@@ -3,7 +3,6 @@ body{
   margin: 0;
   margin-top: -20px;
   padding: 0;
-  line-height: 1.4em;
 }
 
 .flash {
@@ -131,6 +130,17 @@ nav p {
   text-align: left;
 }
 /*Forms */
+
+.add-company {
+  width: 60%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+.add-company-steps {
+  width: 60%;
+  margin: auto;
+}
 #new_user input[type="text"], #new_user input[type="password"], form[action="/sessions"] input[type="text"], form[action="/sessions"] input[type="password"]{
   background:#E0E0E0;
   color:#999999;

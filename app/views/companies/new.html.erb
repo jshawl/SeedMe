@@ -1,3 +1,13 @@
 <h2>Add a Company</h2>
 <h3 class = "flash"><%= flash[:notice] %></h3>
+<p class = "add-company">
+  When adding a company, it's important you follow the below steps regarding the Video Link URL. Currently the SeedMe platform only supports YouTube videos. We are hard at work to support other video sources as well.
+  Additionally, if is VITAL that you pull the embedded URL, rather than the Watch URL, as shown in the pitcture below! We hope to have improvements to this functionality in further updates!
+  <ul class = "add-company-steps">
+    <li>Navigate to Link for YouTube Video</li>
+    <li> Click on Share Button </li>
+    <li> Click on Embed Tab</li>
+    <li>You will see a link that looks like width="560" height="315" src="https://www.youtube.com/embed/eAYd-TfPCXw" frameborder="0" allowfullscreen. <br/> <strong>The important piece is the link in between quotes in src https://www.youtube.com/embed/eAYd-TfPCXw. Input that link WITHOUT QUOTES into the Video URL field below.</strong> </li>
+  </ul>
+</p>
 <%= render 'form' %>
