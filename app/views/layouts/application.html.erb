@@ -22,15 +22,15 @@
     </ul>
   </header>
   <div class = "wrapper">
+    <% if current_user %>
     <nav>
-      <% if current_user %>
         <p id = "navigation-text"> Menu </p>
         <%= link_to "Add Company", new_user_company_path(current_user, Company.new) %>
         <%= link_to "Company Index", companies_path %>
-        <%= link_to "Watch List", root_url %>
+        <%= link_to "Watch List", favorites_path %>
         <%= link_to "Profile Page", user_path(current_user) %>
-      <% end %>
     </nav>
+    <% end %>
 <%= yield %>
 </div>
 </body>

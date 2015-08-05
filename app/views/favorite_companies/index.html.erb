@@ -1,0 +1,5 @@
+<% @favorites.each do |favorite| %>
+  <ul class ="favorites">
+    <h3 class = "favorite-name"><%= link_to favorite.name, user_company_path(favorite.user.id, favorite) %></h3>
+  </ul>
+<% end %>

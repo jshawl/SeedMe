@@ -1,4 +1,9 @@
 <h2><%= flash[:notice] %></h2>
+<%- unless current_user.favorite_companies.exists?(id: @company.id) -%>
+  <%= link_to 'Add to Favorites', company_favorite_companies_path(@company), method: :post %>
+<%- else -%>
+  <%= link_to 'Remove from Favorites', company_favorite_company_path(@company.id, params[:id]), method: :delete %>
+<%- end -%>
 <%= render @company %>
 <% if @is_user  %>
 <ul class = "edit-delete">
