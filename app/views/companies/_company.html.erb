@@ -1,6 +1,6 @@
 <div class="companies">
   <h2 class="company-name"> <%= link_to company.name, user_company_path(company.user, company) %></h2>
-  <%= link_to user_company_upvote_path(current_user, company), method: :put do %>
+  <%= link_to company_upvote_path(current_user, company), method: :put do %>
       Likes
     <%= company.get_upvotes.size %>
   <% end %>
