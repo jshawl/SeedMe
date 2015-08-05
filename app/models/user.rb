@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   has_many :companies, dependent: :destroy
 
   has_many :favorites
+  has_many :messages
   has_many :favorite_companies, through: :favorites, source: :favorited, source_type: 'Company'
   has_secure_password
 end
