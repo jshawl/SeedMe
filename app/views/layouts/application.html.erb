@@ -13,8 +13,8 @@
     <ul class = "header-nav">
       <%= link_to "Home", root_url %>
       <% if current_user %>
-        Logged in as <%= current_user.email %>.
-        <%= link_to "Log Out", logout_path, method: :delete %>
+      <%= link_to "Log Out", logout_path, method: :delete %>
+        Logged in as <%= current_user.email %>
       <% else %>
         <%= link_to "Sign Up", signup_path %> or
         <%= link_to "Log In", login_path %>

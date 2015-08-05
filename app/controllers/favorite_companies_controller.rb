@@ -3,7 +3,7 @@ class FavoriteCompaniesController < ApplicationController
   before_action :set_company
 
   def create
-    if Favorite.create(favorited: @company, user: @current_user)
+    if Favorite.create(favorited: @company, user: current_user)
       redirect_to user_company_path(@company.user, @company), notice: "Company has been favorited"
     else
       redirect_to @company, alert: "Something went wrong! Company not favorited."
