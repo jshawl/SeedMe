@@ -1,4 +1,4 @@
-<h2><%= flash[:notice] %></h2>
+<h2 class = "flash"><%= flash[:notice] %></h2>
 <%- unless current_user.favorite_companies.exists?(id: @company.id) -%>
   <%= link_to 'Add to Watchlist', company_favorite_companies_path(@company), method: :post, class: "add-favorite" %>
 <%- else -%>

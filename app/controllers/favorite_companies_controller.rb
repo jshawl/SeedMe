@@ -3,7 +3,8 @@ class FavoriteCompaniesController < ApplicationController
 
   def create
     if Favorite.create(favorited: @company, user: current_user)
-      redirect_to :back, notice: 'Company has been favorited'
+      flash[:notice] = 'Company has been favorited'
+      redirect_to :back
     else
       redirect_to :back, alert: 'Something went wrong'
     end

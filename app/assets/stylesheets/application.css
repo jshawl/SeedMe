@@ -96,7 +96,9 @@ nav p {
 .company-description{
   text-decoration: underline;
 }
-
+.pitch-text{
+  font-size: 18px;
+}
 .edit-delete{
   position:relative;
   float: right;
