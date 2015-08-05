@@ -13,6 +13,7 @@ body{
 
 h1 {
   text-align: center;
+  color: #193441;
 }
 header{
   float: left;
@@ -74,10 +75,17 @@ nav p {
   font-size: 1.2em;
 }
 /*Company Info*/
-.companies, .users {
+.companies {
   width: 50%;
   margin: 0 auto;
   border-bottom: 5px solid #91AA9D;
+  margin-bottom: 20px;
+}
+
+.companies a{
+  text-decoration: none;
+  color: #3E606F;
+  border-bottom: 1.5px solid;
 }
 
 .company-name{
@@ -97,7 +105,10 @@ nav p {
   right: 150px;
   list-style: none;
 }
-
+.add-favorite{
+  position: relative;
+  left: 14.5%;
+}
 .edit-delete a{
   text-align:center;
   display: block;

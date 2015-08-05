@@ -8,7 +8,7 @@ class CompaniesController < ApplicationController
   end
 
   def show
-    @is_user = is_user
+      @is_user = is_user
   end
 
   def new
