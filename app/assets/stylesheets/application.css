@@ -120,6 +120,18 @@ nav p {
   text-align: left;
 }
 /*Forms */
+#new_user input[type="text"], #new_user input[type="password"], form[action="/sessions"] input[type="text"], form[action="/sessions"] input[type="password"]{
+  background:#E0E0E0;
+  color:#999999;
+  border:1px solid #CCCCCC;
+  border-radius:17px;
+  font-size:16px;
+  height: 30px;
+  line-height:30px;
+  width: 223px;
+  padding: 10px;
+  margin-bottom: 7px;
+}
 
 #new_company input, #new_company textarea {
   display: block;
