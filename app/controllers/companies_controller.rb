@@ -56,7 +56,7 @@ class CompaniesController < ApplicationController
         params.require(:company).permit(:name, :industry, :pitch_text, :pitch_url)
     end
     def get_user
-      @user = User.find(params[:user_id])
+      @user = current_user
     end
     def get_company
       @company = Company.find(params[:company_id] || params[:id])

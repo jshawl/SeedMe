@@ -6,8 +6,9 @@ Rails.application.routes.draw do
     end
   end
   resources :sessions
-  resources :favorite_companies, only: [:create, :destroy]
-  resources :companies, only: [:index, :create]
+  resources :companies, only: [:index, :show, :create] do
+    resources :favorite_companies, only: [:create, :destroy]
+  end
 
   get 'signup', to: 'users#new', as: 'signup'
   get 'login', to: 'sessions#new', as: 'login'
