@@ -9,7 +9,8 @@ class SessionsController < ApplicationController
       session[:user_id] = user.id
       redirect_to companies_path, notice: "Logged in!"
     else
-      flash.now.alert = "Email or password is invalid."
+      flash.now[:notice] = "Username or password is invalid. Both are Case Sensitive!"
+      render :new
     end
   end
 

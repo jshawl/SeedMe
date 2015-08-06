@@ -5,7 +5,9 @@
     <%= company.get_upvotes.size %>
   <% end %>
   <h3 class="company-user"> Founder: <%= link_to "#{company.user.first_name} #{company.user.last_name}", user_path(company.user) %></h3>
-  <iframe width="420" height="315" src= <%= company.pitch_url %> frameborder="0" allowfullscreen></iframe>
+  <div class="">
+      <%= embed(company.pitch_url) %>
+  </div>
   <p>
     <h3 class = "company-description">Company Description</h3>
     <p class= "pitch-text">

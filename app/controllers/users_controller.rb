@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   skip_before_action :current_user
-  skip_before_action :authorize 
+  skip_before_action :authorize
 
 
   def show
@@ -19,7 +19,9 @@ class UsersController < ApplicationController
   def create
     @user = User.create(user_params)
     if @user.save
-      redirect_to root_url, notice: "Your Account Has Been Created!"
+      message = "Your Account Has Been Created."
+      flash[:notice] = message
+      redirect_to '/login'
     else
       render "new"
     end

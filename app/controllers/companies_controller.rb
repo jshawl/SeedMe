@@ -60,6 +60,6 @@ class CompaniesController < ApplicationController
       @company = Company.find(params[:company_id] || params[:id])
     end
     def is_user
-      current_user.id == User.find(params[:user_id])
+      current_user.id == User.find(params[:user_id]).id
     end
 end
