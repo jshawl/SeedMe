@@ -1,0 +1,13 @@
+<h2>Sent Messages</h2>
+<% @sent.each do |message| %>
+  <div class="messages">
+    <ul>
+      <% if message.subject.length == 0%>
+          <li><h3> <%= link_to "(No Subject)", user_message_path(message.sender, message) %> - To <%= message.receiver.username %> on <%= message.created_at.strftime("%D at %l:%M %p") %></h3></li>
+      <% else %>
+      <li><h3> <%= link_to "#{message.subject}", user_message_path(message.sender, message) %> - To <%= message.receiver.username %> on <%= message.created_at.strftime("%D at %l:%M %p") %> </h3></li>
+      <% end %>
+    </ul>
+  </div>
+
+<% end %>

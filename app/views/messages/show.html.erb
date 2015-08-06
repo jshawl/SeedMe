@@ -1,13 +1,18 @@
-<h2>Message From <%= @message.sender.username %> on <%= @message.created_at.strftime("%D at %l:%M %p") %></h2>
+<h2>Message
+  <% if @user_is_message_sender %>
+    to <%= @message.receiver.username  %> on <%= @message.created_at.strftime("%D at %l:%M %p") %>
+  <% else %>
+    From <%= @message.sender.username %> on <%= @message.created_at.strftime("%D at %l:%M %p") %>
+  <% end %>
+</h2>
   <div class="messages">
-    <% if @message.subject.length == 0%>
+    <% if @message.subject.length == 0 %>
         Subject: <span> (No Subject) </span>
     <% else %>
       Subject: <span><%= @message.subject %></span>
-  <% end %>
+    <% end %>
     <p>
       Message: <%= @message.body %>
     </p>
-
     <%= link_to "Reply", new_user_message_path(@message.sender) %>
   </div>

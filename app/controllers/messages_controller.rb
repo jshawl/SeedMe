@@ -21,11 +21,16 @@ class MessagesController < ApplicationController
 
   def show
     @message = Message.find(params[:id])
+    @user_is_message_sender = user_is_message_sender
   end
     private
     def message_params
       params.required(:message).permit(:subject, :body)
     end
+    def user_is_message_sender
+      current_user.id == @message.sender.id
+    end
+
     def receiver
       @receiver = User.find(params[:user_id])
     end
