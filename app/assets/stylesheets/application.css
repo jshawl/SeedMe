@@ -73,6 +73,15 @@ nav p {
   color: #ffffff;
   font-size: 1.2em;
 }
+
+/*User Info*/
+
+.user-info {
+    width: 30%;
+    margin: auto;
+    font-size:18px;
+}
+
 /*Company Info*/
 .companies {
   width: 50%;
