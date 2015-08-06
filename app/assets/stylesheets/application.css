@@ -29,7 +29,10 @@ div.wrapper h2{
   margin-bottom: 1px;
 }
 
-
+.header-nav li{
+  display:inline-block;
+  text-decoration: none;
+}
 .header-nav a{
   display: inline-block;
   margin: auto;
