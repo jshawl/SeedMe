@@ -179,6 +179,13 @@ nav p {
   margin: auto;
 }
 
+.new-message{
+    width: 30%;
+    margin: auto;
+}
+.new-message input, .new-message label{
+  display:block;
+}
 .edit_company{
   margin-left: 25%;
 }
