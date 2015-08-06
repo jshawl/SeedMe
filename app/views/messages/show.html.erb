@@ -1,7 +1,10 @@
 <h2>Message From <%= @message.sender.username %> on <%= @message.created_at.strftime("%D at %l:%M %p") %></h2>
   <div class="messages">
-
+    <% if @message.subject.length == 0%>
+        Subject: <span> (No Subject) </span>
+    <% else %>
       Subject: <span><%= @message.subject %></span>
+  <% end %>
     <p>
       Message: <%= @message.body %>
     </p>
