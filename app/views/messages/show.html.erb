@@ -1,0 +1,8 @@
+<h2>Message From <%= @message.sender.username %> on <%= @message.created_at.strftime("%D at %l:%M %p") %></h2>
+  <div class="messages">
+
+      Subject: <span><%= @message.subject %></span>
+    <p>
+      Message: <%= @message.body %>
+    </p>
+  </div>

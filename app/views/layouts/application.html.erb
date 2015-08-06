@@ -29,7 +29,7 @@
         <%= link_to "Company Index", companies_path %>
         <%= link_to "Watch List", favorites_path %>
         <%= link_to "Profile Page", user_path(current_user) %>
-        <%= link_to "Messages(#{current_user.received_messages.length})", user_messages_path(current_user) %>
+        <%= link_to "Messages (#{current_user.received_messages.length})", user_messages_path(current_user) %>
     </nav>
     <% end %>
 <%= yield %>

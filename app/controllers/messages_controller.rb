@@ -1,7 +1,9 @@
 class MessagesController < ApplicationController
-  before_action :receiver, only: [:new, :create]
+  before_action :receiver
 
   def index
+    @sent = current_user.sent_messages
+    @received = current_user.received_messages.order(created_at: :desc)
   end
 
   def new
@@ -15,6 +17,10 @@ class MessagesController < ApplicationController
     else
       redirect_to :back, notice: "Something went wrong."
     end
+  end
+
+  def show
+    @message = Message.find(params[:id])
   end
     private
     def message_params

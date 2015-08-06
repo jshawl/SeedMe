@@ -1,6 +1,6 @@
 <%= form_for [@receiver, @message], html: {class: "new-message"} do |f| %>
   <%= f.label :subject %>
-  <%= f.text_field :subject, size: 40 %>
+  <%= f.text_field :subject, placeholder: "Subject", size: 40 %>
 
   <%= f.label :body %>
   <%= f.text_area :body, size: "50x20"%>

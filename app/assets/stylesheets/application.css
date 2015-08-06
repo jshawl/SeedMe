@@ -82,6 +82,12 @@ nav p {
     font-size:18px;
 }
 
+.messages{
+  width:40%;
+  margin: auto;
+  font-size: 18px;
+}
+
 /*Company Info*/
 .companies {
   width: 50%;
