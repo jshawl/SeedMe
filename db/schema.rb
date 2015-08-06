@@ -40,13 +40,14 @@ ActiveRecord::Schema.define(version: 20150805203551) do
   add_index "favorites", ["user_id"], name: "index_favorites_on_user_id", using: :btree
 
   create_table "messages", force: :cascade do |t|
-    t.integer  "sender"
-    t.string   "receiver"
+    t.integer  "user_id"
     t.string   "subject"
     t.text     "body"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "messages", ["user_id"], name: "index_messages_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string "username"
@@ -74,4 +75,5 @@ ActiveRecord::Schema.define(version: 20150805203551) do
 
   add_foreign_key "companies", "users"
   add_foreign_key "favorites", "users"
+  add_foreign_key "messages", "users"
 end
