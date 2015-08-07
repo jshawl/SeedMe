@@ -1,4 +1,3 @@
-<h2 class = "flash"><%= flash[:notice] %></h2>
 <%- unless current_user.favorite_companies.exists?(id: @company.id) -%>
   <%= link_to 'Add to Watchlist', company_favorite_companies_path(@company), method: :post, class: "add-favorite" %>
 <%- else -%>
@@ -7,7 +6,7 @@
 <%= render @company %>
 <% if @is_user  %>
 <ul class = "edit-delete">
-    <li><%= link_to "Edit Company", edit_user_company_path(@user, @company), class: "edit-link"%></li>
-    <li><%= link_to "Delete Company", user_company_path(@user, @company), method: :delete %></li>
+    <li><%= link_to "Edit Company", edit_user_company_path(current_user, @company), class: "edit-link"%></li>
+    <li><%= link_to "Delete Company", user_company_path(current_user, @company), method: :delete %></li>
 </ul>
 <% end %>

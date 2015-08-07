@@ -20,6 +20,7 @@
         <li><%= link_to "Log In", login_path %></li>
       <% end %>
     </ul>
+    <h3 class = "flash"><%= flash[:notice] %></h3>
   </header>
   <div class = "wrapper">
     <% if current_user %>

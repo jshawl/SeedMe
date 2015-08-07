@@ -3,6 +3,7 @@ body{
   margin: 0;
   margin-top: -20px;
   padding: 0;
+  background: #FCFFF5;
 }
 
 .flash {
@@ -44,13 +45,7 @@ div.wrapper h2{
   border: solid #91AA9D 2px;
   text-decoration: none;
   margin-left: 10px;
-}
-.header-nav a{
-  text-decoration: none;
   color: #ffffff;
-}
-body{
-  background: #FCFFF5;
 }
 
 nav {

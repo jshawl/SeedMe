@@ -16,7 +16,6 @@ class FavoriteCompaniesController < ApplicationController
   end
 
   def index
-    @favorites = current_user.favorite_companies
   end
 
   private
