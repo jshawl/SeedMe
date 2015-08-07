@@ -1,5 +1,4 @@
 class CompaniesController < ApplicationController
-  before_action :get_user, only: [:show, :edit, :new, :create, :update, :destroy]
   before_action :get_company, only: [:show, :edit, :update, :destroy, :upvote]
   before_action :is_user, only: [:show]
 
@@ -37,10 +36,9 @@ class CompaniesController < ApplicationController
   end
 
   def destroy
-    message = "You've Successfully Deleted Your Company."
+    flash[:notice] = "You've Successfully Deleted Your Company."
     @company.destroy
     redirect_to companies_path
-    flash[:notice] = message
   end
 
   def upvote
@@ -52,9 +50,6 @@ class CompaniesController < ApplicationController
 
     def company_params
         params.require(:company).permit(:name, :industry, :pitch_text, :pitch_url)
-    end
-    def get_user
-      @user = current_user
     end
     def get_company
       @company = Company.find(params[:company_id] || params[:id])
