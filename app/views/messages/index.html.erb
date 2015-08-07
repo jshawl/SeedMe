@@ -1,4 +1,5 @@
 <h2>Messages</h2>
+<h2 class = "flash"><%= flash[:notice] %></h2>
 <% @received.each do |message| %>
   <div class="messages">
     <ul>
@@ -7,9 +8,9 @@
       <% else %>
       <li><h3> <%= link_to "#{message.subject}", user_message_path(@receiver, message) %> - From <%= message.sender.username %> on <%= message.created_at.strftime("%D at %l:%M %p") %> </h3></li>
       <% end %>
+      <li> <%= link_to "Delete Message", user_message_path(current_user, message), method: :delete %> </li>
     </ul>
   </div>
 
 <% end %>
-
 <%= render partial: 'sent' %>

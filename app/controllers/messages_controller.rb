@@ -23,6 +23,15 @@ class MessagesController < ApplicationController
     @message = Message.find(params[:id])
     @user_is_message_sender = user_is_message_sender
   end
+
+  def destroy
+    @message = Message.find(params[:id])
+    if @message.destroy
+      message = "Message Deleted"
+      redirect_to :back
+      flash[:notice] = message
+    end
+  end
     private
     def message_params
       params.required(:message).permit(:subject, :body)
