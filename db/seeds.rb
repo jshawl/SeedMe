@@ -13,3 +13,6 @@ Company.create(name: "Championship Trading", industry: "Sports", pitch_text: "Ba
 ", pitch_url: "https://www.youtube.com/watch?v=SQM1NjL0_Fc", user: User.first)
 
 Company.create(name: "FundMonster", industry: "Technology", pitch_text: "Meggings narwhal cray squid, flexitarian Truffaut locavore pickled drinking vinegar keytar. Tattooed Odd Future Williamsburg, forage keytar squid pork belly 90's YOLO. Echo Park Shoreditch Tumblr, trust fund Odd Future listicle retro narwhal McSweeney's roof party you probably haven't heard of them plaid lumbersexual taxidermy. Food truck umami wayfarers actually, Neutra American Apparel biodiesel. DIY taxidermy kale chips twee, forage keytar retro. Mustache salvia skateboard, next level cornhole cliche pour-over. VHS salvia raw denim Tumblr, gastropub Shoreditch Blue Bottle Thundercats vegan cronut wolf.", pitch_url: "https://www.youtube.com/watch?v=tm2Jy64b0dI", user: User.last)
+
+# Excellent job seeding user data! Consider adding more seed data for some of the more advanced functionality in your app in the future:
+# like the watchlist, facorites, and messages.

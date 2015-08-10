@@ -1,6 +1,7 @@
 class CompaniesController < ApplicationController
   before_action :get_company, only: [:show, :edit, :update, :destroy, :upvote]
   before_action :is_user, only: [:show]
+  # excellent use of callbacks here!
 
   def index
     @companies = Company.all.order(name: :asc)

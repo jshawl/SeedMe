@@ -37,6 +37,8 @@ class MessagesController < ApplicationController
       params.required(:message).permit(:subject, :body)
     end
     def user_is_message_sender
+     # excellent! I tried to hack this but your code was bullet proof!
+     # in the future, consider using a gem like cancancan for authorization
       current_user.id == @message.sender.id
     end
 

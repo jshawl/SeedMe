@@ -31,6 +31,8 @@
         <%= link_to "Watch List", favorites_path %>
         <%= link_to "Profile Page", user_path(current_user) %>
         <%= link_to "Messages (#{current_user.received_messages.length})", user_messages_path(current_user) %>
+	<!-- can you think of a way to show which page you're currently on? i.e. maybe check the controller name
+	that's rendering the view, or check out like http://stackoverflow.com/questions/3705898/best-way-to-add-current-class-to-nav-in-rails-3 -->
     </nav>
     <% end %>
 <%= yield %>

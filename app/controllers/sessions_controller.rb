@@ -18,4 +18,6 @@ class SessionsController < ApplicationController
     session[:user_id] = nil
     redirect_to new_session_path, notice: "Logged out!"
   end
+  # it's refreshing to see such a clean solution for hand-rolled authentication.
+  # Really nice job here!!
 end
