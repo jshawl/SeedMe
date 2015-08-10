@@ -1,22 +1,7 @@
 # SeedMe
-ERD: 
 
-https://www.lucidchart.com/invitations/accept/535c06fe-65ae-4083-9d18-1cd3b92a1e1a
+Welcome to SeedMe, an app designed for entrepreneurs to share information about their companies and collaborate with each other in an online community.
 
+The app was developed using Rails 4.2.3. All gems included in Gemfile. To access the development environment, simply run a bundle install and create/migrate/seed the database. A production version is live on Heroku, linked from this repository.
 
-s= startup user 
-i= investor
-S:
-
-1. As a user, I should be able to view my profile information.
-2. As a user, I should be able to upload a pitch video to the website. 
-3. As a user, I should be able to leave feedback on other pitches.
-4. As a user, I should be able to see all recent pitches. 
-5. As a user, I should be able to propose edits to other written pitches. 
-6. As a user, I should be able to 'like' other startups. 
-
-I:
-
-1. As a user, I should be able to privately contact an investor. 
-2. As a user, I should be able to keep a list of startups that interest me.
-3. As a user, I should be able to view a list of startups I'm currently invested in. 
+Next steps involve adding further user functionality such as threaded messaging, an investor portal and updating the styling. 
